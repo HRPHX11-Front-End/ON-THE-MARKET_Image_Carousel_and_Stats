@@ -1,6 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const aws = require('aws-sdk');
+const awscredentials = require('../../awsconfig.json')
+
+aws.config.credentials = awscredentials;
 
 const Images = require('../models/images')
 
@@ -22,6 +26,21 @@ router.get('/all', (req, res, next) => {
       console.log(err);
       res.status(500).json({error: err});
   })
+});
+
+router.get('/propertyImages', async (req, res, next) => {
+    aws.config.setPromisesDependency();
+    try {
+    const s3 = new aws.S3();
+    const response = await s3.listObjectsV2({
+      Bucket: 'fecredfinproductimages',
+      Prefix: 'property_01'
+    }).promise();
+    res.json({ response: response.Contents})
+  }
+   catch(e) {
+    console.log('error', e);
+  }
 });
 
 router.post("/", (req, res, next) => {

@@ -4,6 +4,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+
 const imagesRoutes = require('./api/routes/images');
 const descriptionRoutes = require('./api/routes/description');
 const statsRoutes = require('./api/routes/stats');
@@ -18,8 +19,10 @@ mongoose.connect('mongodb://localhost/redfin_cds', {
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-//app.use(express.static('client/dist/'))
+app.use(express.static('client/dist/'))
 
+
+//*Headers
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header(
@@ -33,12 +36,10 @@ app.use((req, res, next) => {
   next();
 });
 
-
 //*Routes which should handle requests
 app.use('/images', imagesRoutes);
 app.use('/description', descriptionRoutes);
 app.use('/stats', statsRoutes)
-
 
 //*Default routes
 app.use((req, res, next) => {
