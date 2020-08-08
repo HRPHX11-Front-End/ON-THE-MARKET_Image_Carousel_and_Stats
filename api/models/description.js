@@ -2,8 +2,12 @@ const mongoose = require ('mongoose');
 
 const descriptionSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  property_id: Number,
-  url: String
+  description: String,
+  listingAgent: String,
+  lastChecked: String,
+  lastUpdated: String,
+  source: String
+
 });
 
 module.exports = mongoose.model('Description', descriptionSchema)

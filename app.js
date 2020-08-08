@@ -4,6 +4,9 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
+const dbseed = require('./dbseed');
+
+console.log(dbseed);
 
 const imagesRoutes = require('./api/routes/images');
 const descriptionRoutes = require('./api/routes/description');

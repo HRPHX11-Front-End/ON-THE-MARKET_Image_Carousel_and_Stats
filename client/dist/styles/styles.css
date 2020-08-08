@@ -1,0 +1,13 @@
+
+.carousel {
+  width: 730px  !important;
+}
+
+.control-arrow {
+  background-color: rgba(0,0,0,0) !important;
+  color: rgba(0,0,0,0.9)  !important;
+}
+
+.control-arrow::before {
+   font-size: 62px !important;
+}
