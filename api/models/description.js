@@ -4,6 +4,7 @@ const descriptionSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   description: String,
   listingAgent: String,
+  listingFirm: String,
   lastChecked: String,
   lastUpdated: String,
   source: String

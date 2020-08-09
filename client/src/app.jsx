@@ -13,7 +13,7 @@ export default class App extends React.Component {
   render() {
     return (
     <div>
-     <ImageCarousel id='slider'/>
+     <ImageCarousel/>
      <Description/>
      <Stats/>
     </div>

@@ -1,4 +1,7 @@
 
+body {
+  font-family: 'Libre Franklin', sans-serif;
+}
 .carousel {
   width: 730px  !important;
 }
@@ -11,3 +14,24 @@
 .control-arrow::before {
    font-size: 62px !important;
 }
+
+#description {
+  color: #717171;
+  font-size: 1em;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  width: 730px  !important;
+}
+
+#realtorInfo {
+  color: #717171;
+  font-size: .9em;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  width: 730px  !important;
+}
+
+#realtorInfo p {
+  margin: 0px;
+}
+
