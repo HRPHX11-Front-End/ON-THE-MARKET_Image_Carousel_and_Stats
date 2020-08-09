@@ -1,14 +1,24 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
 
 const Stats = require('../models/stats')
 
-router.get('/',
-  (req, res, next) => {
-    res.status(200).json({
-      message: 'Handling GET requests to /stats'
-    });
-  });
+router.get('/', async (req, res, next) => {
+
+  try {
+  //pull random Description from db collection Description
+    await Stats.countDocuments().exec(
+    function(err, count) {
+      var random = Math.floor(Math.random() * count)
+      Stats.findOne().skip(random)
+      .then(doc => {
+        console.log('stats', doc);
+        res.send({ stats: doc })
+      })
+    })
+ } catch (err) {
+   console.log(err);
+ }
+})
 
   module.exports = router;

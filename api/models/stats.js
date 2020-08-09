@@ -2,17 +2,19 @@ const mongoose = require ('mongoose');
 
 const statsSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  listPrice: Number,
-  estPayment: Number,
+  listPrice: String,
+  estPayment: String,
   priceSqFt: Number,
-  status: Boolean,
+  status: String,
   timeOnRedfin: Number,
   propertyType: String,
-  yearBuilt: Date,
+  yearBuilt: String,
   style: String,
   community: String,
-  lotSize: Number,
+  lotSize: String,
   mlsNum: Number
 });
+
+
 
 module.exports = mongoose.model('Stats', statsSchema)

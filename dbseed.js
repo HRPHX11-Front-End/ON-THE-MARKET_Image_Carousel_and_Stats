@@ -16,17 +16,17 @@ const dbseed = () => {
     let source = 'ARMLS';
 
 //Stats faker source variables
-    let listPrice = faker.finance.amount();
-    let estPayment = faker.finance.amount();
-    let priceSqFt = faker.finance.amount();
-    let status = faker.random.boolean();
-    let timeOnRedfin = faker.random.number();
-    let propertyType = faker.random.word();
-    let yearBuilt = faker.date.past();
-    let style = faker.random.word();
-    let community = faker.random.word();
-    let lotSize = faker.random.number();
-    let mlsNum = faker.random.number();
+    let listPrice = formatMoney(faker.finance.amount(300000, 600000));
+    let estPayment = estPayments(listPrice);
+    let priceSqFt = formatMoney(faker.finance.amount(180, 300));
+    let status = propStatus(faker.random.boolean());
+    let timeOnRedfin = faker.random.number({min: 0, max: 200});
+    let propertyType = 'Single Family Detached';
+    let yearBuilt = yrBuilt(faker.date.between('1950', '2018'));
+    let style = houseStyle();
+    let community = faker.random.words(2);
+    let lotSize = addCommas(faker.random.number({min:3000, max:15000}));
+    let mlsNum = faker.random.number({min:1000000, max:9999999});
 
 //create ranodm Description document
     let randoDescription = new Description({
@@ -61,8 +61,12 @@ const dbseed = () => {
 
 //function to clear out database and reseed with 100 new Description and Stats documents
 const refreshDb = () => {
-  Description.remove();
-  Stats.remove();
+  Description.remove(function(err, removed) {
+    console.log(removed);
+  })
+  Stats.remove(function(err, removed) {
+    console.log(removed);
+  })
   dbseed();
 }
 
@@ -81,6 +85,12 @@ function lastUp() {
   return `${monthDay}, ${year}`;
 }
 
+//function to format yearBuilt date/time
+function yrBuilt(dateTime) {
+  dateTime = dateTime.toString();
+  return dateTime = dateTime.substring(11, 15);
+}
+
 //fucntion to find how many hours ago a property was last checked
 function hoursPast() {
   let date1 = faker.date.recent();
@@ -91,4 +101,47 @@ function hoursPast() {
   return Math.abs(Math.round(diff));
 }
 
+//function to determine propStatus from boolean
+function propStatus(bool) {
+  if (bool) {
+    return 'Active'
+  } else {
+    return 'Pending Offer'
+  }
+}
+
+//function to get espPayment based on listPrice
+function estPayments(val) {
+  val = val.replace(',', '')
+  val = parseInt(val) * .004;
+  val = formatMoney(val);
+  return val;
+}
+
+function houseStyle() {
+  let styles = ['Ranch', 'Contemporary', 'Craftman', 'Modern']
+  return styles[Math.floor(Math.random() * styles.length)];
+}
+
+//function to add commas to Numbers
+function addCommas(val) {
+  return val.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+//function to format money values
+function formatMoney(amount, decimalCount = 0, decimal = ".", thousands = ",") {
+  try {
+    decimalCount = Math.abs(decimalCount);
+    decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
+
+    const negativeSign = amount < 0 ? "-" : "";
+
+    let i = parseInt(amount = Math.abs(Number(amount) || 0).toFixed(decimalCount)).toString();
+    let j = (i.length > 3) ? i.length % 3 : 0;
+
+    return negativeSign + (j ? i.substr(0, j) + thousands : '') + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + thousands) + (decimalCount ? decimal + Math.abs(amount - i).toFixed(decimalCount).slice(2) : "");
+  } catch (e) {
+    console.log(e)
+  }
+};
 
