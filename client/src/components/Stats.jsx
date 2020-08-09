@@ -42,7 +42,7 @@ export default class Stats extends Component {
   render() {
     return (
      <div>
-     <p className='statsTitle' style={{fontWeight: '900'}}>Price Insights</p>
+     <p className='statsTitle'>Price Insights</p>
      <div className='piContainer'>
        <div className='statEntry'>
         <span className='statName'>List Price</span>
@@ -57,7 +57,7 @@ export default class Stats extends Component {
         <span className='statVal'>${this.state.priceSqFt} </span>
        </div>
      </div>
-     <p className='statsTitle' style={{fontWeight: '900'}}>Home Facts</p>
+     <p className='statsTitle'>Home Facts</p>
      <div className='piContainer'>
        <div className='statEntry'>
         <span className='statName'>Status</span>

@@ -41,6 +41,7 @@ body {
 .statsTitle {
   margin-top: 32px;
   margin-bottom: 0px;
+  font-weight: 900;
 }
 
 .piContainer {
