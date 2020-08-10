@@ -84,7 +84,6 @@ router.post("/", (req, res, next) => {
   product
     .save()
     .then(result => {
-      console.log(result);
       res.status(201).json({
         message: "Handling POST requests to /images",
         createdProduct: result

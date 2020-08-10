@@ -12,7 +12,6 @@ router.get('/', async (req, res, next) => {
       var random = Math.floor(Math.random() * count)
       Stats.findOne().skip(random)
       .then(doc => {
-        console.log('stats', doc);
         res.send({ stats: doc })
       })
     })

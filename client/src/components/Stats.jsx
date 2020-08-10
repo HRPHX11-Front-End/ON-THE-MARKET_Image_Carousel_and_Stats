@@ -26,13 +26,9 @@ export default class Stats extends Component {
     axios.get('/stats')
       .then(data => {
         let stats = data.data.stats;
-        console.log('stats', stats);
         for (var key in stats) {
-          console.log(key)
           this.setState({ [key]: stats[key] })
         }
-        //console.log('stats', this.state.stats)
-
       })
       .catch(err => {
         console.log('error fetching description')
@@ -81,7 +77,7 @@ export default class Stats extends Component {
        </div>
        <div className='statEntry'>
         <span className='statName'>Community</span>
-        <span className='statVal'>{this.state.community}</span>
+        <span className='statVal community'>{this.state.community}</span>
        </div>
        <div className='statEntry'>
         <span className='statName'>Lot Size</span>

@@ -7,24 +7,99 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.carousel {
+.carousel-slider {
   width: 730px  !important;
+  height: 440px !important;
+}
+
+.slider-wrapper {
+  width: 730px  !important;
+  height: 440px !important;
+}
+
+.slider {
+  width: 730px  !important;
+  height: 440px !important;
+}
+
+.carousel-root {
+  width: 600px;
+}
+
+.carousel {
+  width: 730px;
+  background-color: #585858;
+
+}
+
+.thumbs {
+  margin: 0px !important;
+  background-color: #585858;
+  padding-left: 0px !important;
+
+}
+
+.animated {
+  width: 600px;
+  background-color: #585858;
+
+}
+
+
+.thumb {
+  padding: 0px !important;
+  margin-top: 6px !important;
+  border: 0px !important;
+  border: 1px solid #585858 !important
+}
+
+.thumb:hover {
+  border: 1px solid white !important
+}
+
+.thumbs-wrapper {
+  margin: 0px !important;
+  background-color: #585858;
+  width: 670px;
+  margin-left: 30px !important;
+
 }
 
 .control-arrow {
-  background-color: rgba(0,0,0,0) !important;
   color: rgba(0,0,0,0.9)  !important;
 }
 
-.control-arrow::before {
-   font-size: 62px !important;
+.control-next::before {
+
+margin: 0px;
+margin-bottom: 3px !important;
+margin-right: 3px !important;
+}
+
+.control-prev::before {
+
+  margin: 0px;
+  margin-bottom: 3px !important;
+  margin-left: 3px !important;
+  }
+
+
+
+
+.dot {
+  display: none !important;
 }
 
 #description {
-
+  margin-top: 48px;
   font-size: 1em;
-  text-rendering: optimizeLegibility;
   width: 730px  !important;
+}
+
+.descPara {
+  margin: 0px;
+  margin-bottom: 24px;
+
 }
 
 #realtorInfo {
@@ -81,3 +156,46 @@ body {
   width: 50%;
 }
 
+.expander {
+  height: 4em;
+  overflow: hidden;
+}
+
+.showHideContainer {
+  display: inline-block;
+}
+
+.showMoreLess {
+  display: inline-block;
+  font-size: .9em;
+  color: #1080a2;
+}
+
+.expandedArrow {
+  color: #1080a2;
+  fill: #1080a2;
+  transform: rotate(180deg);
+}
+
+.collapsedArrow {
+
+  color: #1080a2;
+  fill: #1080a2;
+}
+
+.linkIcon {
+  color: #1080a2;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 6px;
+}
+
+.contReadingLink {
+  display: inline-block;
+}
+
+.community {
+  text-transform: uppercase;
+}
