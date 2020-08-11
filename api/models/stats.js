@@ -1,4 +1,4 @@
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose');
 
 const statsSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
@@ -12,9 +12,7 @@ const statsSchema = mongoose.Schema({
   style: String,
   community: String,
   lotSize: String,
-  mlsNum: Number
+  mlsNum: Number,
 });
 
-
-
-module.exports = mongoose.model('Stats', statsSchema)
+module.exports = mongoose.model('Stats', statsSchema);

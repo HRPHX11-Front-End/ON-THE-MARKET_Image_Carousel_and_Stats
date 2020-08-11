@@ -1,4 +1,4 @@
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose');
 
 const descriptionSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
@@ -7,8 +7,7 @@ const descriptionSchema = mongoose.Schema({
   listingFirm: String,
   lastChecked: String,
   lastUpdated: String,
-  source: String
-
+  source: String,
 });
 
-module.exports = mongoose.model('Description', descriptionSchema)
+module.exports = mongoose.model('Description', descriptionSchema);

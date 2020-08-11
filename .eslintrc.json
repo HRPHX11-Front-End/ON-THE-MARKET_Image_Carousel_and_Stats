@@ -1,0 +1,22 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+        "document": false
+    },
+    "extends": [
+        "airbnb",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "no-console": 0,
+        "no-unused-vars":"warn",
+        "jsx-quotes": ["error", "prefer-single"],
+        "quotes": ["error", "single"]
+    }
+}

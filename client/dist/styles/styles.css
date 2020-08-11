@@ -77,29 +77,25 @@ margin-right: 3px !important;
 }
 
 .control-prev::before {
-
   margin: 0px;
   margin-bottom: 3px !important;
   margin-left: 3px !important;
-  }
-
-
-
+}
 
 .dot {
   display: none !important;
 }
 
 #description {
-  margin-top: 48px;
+  margin-top: 32px;
   font-size: 1em;
   width: 730px  !important;
+  margin-bottom: 16px;
 }
 
 .descPara {
   margin: 0px;
   margin-bottom: 24px;
-
 }
 
 #realtorInfo {
@@ -169,6 +165,7 @@ margin-right: 3px !important;
   display: inline-block;
   font-size: .9em;
   color: #1080a2;
+  margin-bottom: 0px;
 }
 
 .expandedArrow {

@@ -1,22 +1,23 @@
-import React from 'react'
-import ImageCarousel from './components/ImageCarousel.jsx'
-import Description from './components/Description.jsx';
-import Stats from './components/Stats.jsx'
-import "react-responsive-carousel/lib/styles/carousel.css";
+import React from 'react';
+import ImageCarousel from './components/ImageCarousel';
+import Description from './components/Description';
+import Stats from './components/Stats';
+import 'react-responsive-carousel/lib/styles/carousel.css';
 
 export default class App extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
-    }
+    };
   }
+
   render() {
     return (
-    <div>
-     <ImageCarousel/>
-     <Description/>
-     <Stats/>
-    </div>
-    )
+      <div>
+        <ImageCarousel />
+        <Description />
+        <Stats />
+      </div>
+    );
   }
 }
