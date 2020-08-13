@@ -11,10 +11,13 @@ router.get('/', async (req, res) => {
         const random = Math.floor(Math.random() * count);
         Description.findOne().skip(random)
           .then((doc) => {
-            res.send({ document: doc });
+            res.send(200, { document: doc });
           });
       },
     );
+    res.status(200).json({
+      message: 'Handling GET requests to /description',
+    });
   } catch (err) {
     console.log(err);
   }

@@ -15,6 +15,9 @@ router.get('/', async (req, res) => {
           });
       },
     );
+    res.status(200).json({
+      message: 'Handling GET requests to /stats',
+    });
   } catch (err) {
     console.log(err);
   }
