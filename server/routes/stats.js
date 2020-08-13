@@ -1,17 +1,17 @@
 const express = require('express');
 
 const router = express.Router();
-const Description = require('../models/description');
+const Stats = require('../../dbase/models/stats');
 
 router.get('/', async (req, res) => {
   try {
   // pull random Description from db collection Description
-    await Description.countDocuments().exec(
+    await Stats.countDocuments().exec(
       (err, count) => {
         const random = Math.floor(Math.random() * count);
-        Description.findOne().skip(random)
+        Stats.findOne().skip(random)
           .then((doc) => {
-            res.send({ document: doc });
+            res.send({ stats: doc });
           });
       },
     );

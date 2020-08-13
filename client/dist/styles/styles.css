@@ -29,7 +29,7 @@ body {
 .carousel {
   width: 730px;
   background-color: #585858;
-
+  margin-top: 0px !important;
 }
 
 .thumbs {
@@ -62,19 +62,29 @@ body {
   background-color: #585858;
   width: 670px;
   margin-left: 30px !important;
+}
 
+.thumbs-wrapper .control-arrow {
+  padding-top: 5px !important;
 }
 
 .control-arrow {
   color: rgba(0,0,0,0.9)  !important;
+
+
 }
 
 .control-next::before {
-
 margin: 0px;
 margin-bottom: 3px !important;
 margin-right: 3px !important;
 }
+
+.control-next {
+
+  }
+
+
 
 .control-prev::before {
   margin: 0px;

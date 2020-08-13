@@ -1,7 +1,7 @@
 const faker = require('faker');
 const mongoose = require('mongoose');
-const Description = require('./api/models/description');
-const Stats = require('./api/models/stats');
+const Description = require('./models/description');
+const Stats = require('./models/stats');
 
 // *function to seed random descriptions into db
 /* eslint-disable */

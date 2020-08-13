@@ -4,16 +4,22 @@
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "aws-sdk": "^2.728.0",
     "axios": "^0.19.2",
+    "babel-jest": "^26.3.0",
+    "babel-polyfill": "^6.26.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "enzyme-adapter-react-16.1": "^1.6.3",
     "eslint-config-node": "^4.1.0",
     "eslint-plugin-node": "^11.1.0",
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-enzyme": "^7.1.2",
     "jquery": "^3.5.1",
     "mongoose": "^5.9.27",
     "morgan": "^1.10.0",
@@ -28,9 +34,16 @@
   },
   "scripts": {
     "seed": "node dbseed.js",
-    "start": "nodemon server.js",
+    "start": "nodemon index.js",
     "react-dev": "webpack -d --watch",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "test": "jest"
+  },
+  "jest": {
+    "projects": [
+      "<rootDir>/server/tests/jest-server.config.js",
+      "<rootDir>/client/tests/jest-client.config.js"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,8 +62,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
+    "@babel/plugin-syntax-jsx": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
+    "@testing-library/react": "^9.5.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.2.1",
     "eslint": "^7.2.0",
@@ -59,7 +75,12 @@
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.5",
     "eslint-plugin-react-hooks": "^4.0.0",
+    "jest": "^26.3.0",
+    "jest-css-modules": "^2.1.0",
+    "node-fetch": "^2.6.0",
+    "react-test-render": "^1.1.2",
     "style-loader": "^1.2.1",
+    "supertest": "^4.0.2",
     "webpack": "^4.44.1"
   }
 }

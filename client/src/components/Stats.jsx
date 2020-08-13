@@ -52,15 +52,15 @@ export default class Stats extends Component {
         <div className='piContainer'>
           <div className='statEntry'>
             <span className='statName'>List Price</span>
-            <span className='statVal'>{listPrice}</span>
+            <span className='statVal'>{`$${listPrice}`}</span>
           </div>
           <div className='statEntry'>
             <span className='statName'>Est. Mo. Payment</span>
-            <span className='statVal'>{estPayment}</span>
+            <span className='statVal'>{`$${estPayment}`}</span>
           </div>
           <div className='statEntry'>
             <span className='statName'>Price/Sq.Ft.</span>
-            <span className='statVal'>{priceSqFt}</span>
+            <span className='statVal'>{`$${priceSqFt}`}</span>
           </div>
         </div>
         <p className='statsTitle'>Home Facts</p>

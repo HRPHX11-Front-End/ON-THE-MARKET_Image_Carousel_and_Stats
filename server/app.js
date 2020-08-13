@@ -3,23 +3,19 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
+const cors = require('cors');
+const path = require('path');
 
-const imagesRoutes = require('./api/routes/images');
-const descriptionRoutes = require('./api/routes/description');
-const statsRoutes = require('./api/routes/stats');
-
-// *Database connection
-mongoose.connect('mongodb://localhost/redfin_cds', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const imagesRoutes = require('./routes/images');
+const descriptionRoutes = require('./routes/description');
+const statsRoutes = require('./routes/stats');
 
 // *Middleware
 app.use(morgan('dev'));
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('client/dist/'));
+app.use(express.static(path.join(__dirname, ('.././client/dist'))));
 
 // *Routes which should handle requests
 app.use('/images', imagesRoutes);
