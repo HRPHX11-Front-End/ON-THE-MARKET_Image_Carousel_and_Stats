@@ -6,14 +6,6 @@ const awscredentials = require('../../awsconfig.json');
 
 aws.config.credentials = awscredentials;
 
-// *default /images/
-router.get('/',
-  (req, res) => {
-    res.status(200).json({
-      message: 'Handling GET requests to /images',
-    });
-  });
-
 // *images/propertyImages/:propId/
 // *Route to get all image objects from a specific property folder on S3
 router.get('/propertyImages/:propId', async (req, res) => {
