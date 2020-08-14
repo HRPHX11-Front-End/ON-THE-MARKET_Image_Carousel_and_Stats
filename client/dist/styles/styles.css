@@ -1,32 +1,116 @@
 
 body {
-  font-family: 'Libre Franklin', sans-serif;
+  font-family: Libre Franklin;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.375;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.carousel {
+.carousel-slider {
   width: 730px  !important;
+  height: 440px !important;
+}
+
+.slider-wrapper {
+  width: 730px  !important;
+  height: 440px !important;
+}
+
+.slider {
+  width: 730px  !important;
+  height: 440px !important;
+}
+
+.carousel-root {
+  width: 600px;
+}
+
+.carousel {
+  width: 730px;
+  background-color: #585858;
+  margin-top: 0px !important;
+}
+
+.thumbs {
+  margin: 0px !important;
+  background-color: #585858;
+  padding-left: 0px !important;
+
+}
+
+.animated {
+  width: 600px;
+  background-color: #585858;
+
+}
+
+
+.thumb {
+  padding: 0px !important;
+  margin-top: 6px !important;
+  border: 0px !important;
+  border: 1px solid #585858 !important
+}
+
+.thumb:hover {
+  border: 1px solid white !important
+}
+
+.thumbs-wrapper {
+  margin: 0px !important;
+  background-color: #585858;
+  width: 670px;
+  margin-left: 30px !important;
+}
+
+.thumbs-wrapper .control-arrow {
+  padding-top: 5px !important;
 }
 
 .control-arrow {
-  background-color: rgba(0,0,0,0) !important;
   color: rgba(0,0,0,0.9)  !important;
+
+
 }
 
-.control-arrow::before {
-   font-size: 62px !important;
+.control-next::before {
+margin: 0px;
+margin-bottom: 3px !important;
+margin-right: 3px !important;
+}
+
+.control-next {
+
+  }
+
+
+
+.control-prev::before {
+  margin: 0px;
+  margin-bottom: 3px !important;
+  margin-left: 3px !important;
+}
+
+.dot {
+  display: none !important;
 }
 
 #description {
-  color: #717171;
+  margin-top: 32px;
   font-size: 1em;
-  font-weight: 400;
-  text-rendering: optimizeLegibility;
   width: 730px  !important;
+  margin-bottom: 16px;
+}
+
+.descPara {
+  margin: 0px;
+  margin-bottom: 24px;
 }
 
 #realtorInfo {
-  color: #717171;
+
   font-size: .9em;
-  font-weight: 400;
   text-rendering: optimizeLegibility;
   width: 730px  !important;
 }
@@ -35,3 +119,90 @@ body {
   margin: 0px;
 }
 
+.statsTitle {
+  margin-top: 32px;
+  margin-bottom: 0px;
+  font-weight: 900;
+}
+
+.piContainer {
+  display: flex;
+  width: 730px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.statEntry {
+  display: flex;
+  flex-shrink: 0;
+  width: 45%;
+  flex-shrink: 0;
+
+}
+
+.statName {
+  display: inline-block;
+  flex: 1;
+  text-align: left;
+  flex-shrink: 0;
+  padding-top: 16px;
+  width: 50%;
+  color: #797979;
+}
+
+.statVal {
+  display: inline-block;
+  text-transform: capitalize;
+  flex: 1;
+  text-align: right;
+  flex-shrink: 0;
+  padding-top: 16px;
+  width: 50%;
+}
+
+.expander {
+  height: 4em;
+  overflow: hidden;
+}
+
+.showHideContainer {
+  display: inline-block;
+}
+
+.showMoreLess {
+  display: inline-block;
+  font-size: .9em;
+  color: #1080a2;
+  margin-bottom: 0px;
+}
+
+.expandedArrow {
+  color: #1080a2;
+  fill: #1080a2;
+  transform: rotate(180deg);
+}
+
+.collapsedArrow {
+
+  color: #1080a2;
+  fill: #1080a2;
+}
+
+.linkIcon {
+  color: #1080a2;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 6px;
+}
+
+.contReadingLink {
+  display: inline-block;
+}
+
+.community {
+  text-transform: uppercase;
+}
