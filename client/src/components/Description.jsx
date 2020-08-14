@@ -27,7 +27,7 @@ export default class Description extends Component {
       lastUpdated: '',
       source: '',
     };
-    // this.showMoreLess = this.showMoreLess.bind(this);
+    this.agentImage = this.agentImage.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +44,14 @@ export default class Description extends Component {
       });
   }
 
+  agentImage() {
+    if (this.state.listingAgent.length > 12) {
+      return (
+        <img className='agent' alt='agent' src='./assets/agentTae.jpg' />
+      );
+    }
+  }
+
   render() {
     const { description } = this.state;
     const { listingAgent } = this.state;
@@ -56,13 +64,16 @@ export default class Description extends Component {
       <div>
         <div id='description' className='expander'>
           <p className='descPara'>{ description }</p>
-          <div id='realtorInfo'>
-            <p>
-              {`Listed by ${listingAgent} • ${listingFirm} Realty`}
-            </p>
-            <p>
-              {`Redfin last checked: ${lastChecked} hours ago | Last updated ${lastUpdated} • Source: ${source}`}
-            </p>
+          <div className='agentContainer'>
+            {this.agentImage()}
+            <div id='realtorInfo'>
+              <p>
+                {`Listed by ${listingAgent} • ${listingFirm} Realty`}
+              </p>
+              <p>
+                {`Redfin last checked: ${lastChecked} hours ago | Last updated ${lastUpdated} • Source: ${source}`}
+              </p>
+            </div>
           </div>
         </div>
         <div className='showHideContainer expanded'>
