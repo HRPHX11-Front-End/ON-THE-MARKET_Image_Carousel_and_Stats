@@ -21,11 +21,9 @@ router.get('/propertyImages/:propId', async (req, res) => {
     // *uncomment next line to see pulled object from S3
     // *console.log({ response: response.Contents})
     res.send({ response: response.Contents });
-  } catch (e) {
-    console.log('error', e);
+  } catch (err) {
+    console.log('error', err);
   }
 });
-
-// *Dont think I need the Routes below this line
 
 module.exports = router;

@@ -1,8 +1,11 @@
-const request = require('supertest');
+const supertest = require('supertest');
 const app = require('../app');
 
-test('should return description data', async () => {
-  await request(app).get('/description')
-    .send()
-    .expect(200);
-});
+const request = supertest(app);
+
+// it('should return description data', async () => {
+//   const response = await request.get('/description');
+//   expect(response.status).toBe(200);
+//   expect(response.body.message).toBe('pass!');
+//   done();
+// });

@@ -1,8 +1,10 @@
-const request = require('supertest');
+const supertest = require('supertest');
 const app = require('../app');
 
-test('should return images data', async () => {
-  await request(app).get('/images/propertyImages/01')
+const request = supertest(app);
+
+it('should return images data', async () => {
+  await request.get('/images/propertyImages/01')
     .send()
     .expect(200);
 });
