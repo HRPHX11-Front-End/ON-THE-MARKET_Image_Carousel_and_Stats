@@ -1,4 +1,6 @@
 import React from 'react';
+import '../styles/styles.css';
+import '../styles/carousel.css';
 
 export default function TourSchedule() {
   return (

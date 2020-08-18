@@ -1,0 +1,464 @@
+
+body {
+  font-family: Libre Franklin;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.375;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#compMain {
+width: 1100px;
+}
+
+.carousel-slider {
+  width: 730px  !important;
+  height: 440px !important;
+}
+
+.slider-wrapper {
+  width: 730px  !important;
+  height: 440px !important;
+}
+
+.slider {
+  width: 730px  !important;
+  height: 440px !important;
+}
+
+.carousel-root {
+  width: 600px;
+}
+
+.carousel {
+  width: 730px;
+  background-color: #585858;
+  margin-top: 0px !important;
+}
+
+.thumbs {
+  margin: 0px !important;
+  background-color: #585858;
+  padding-left: 0px !important;
+
+}
+
+.animated {
+  width: 600px;
+  background-color: #585858;
+
+}
+
+
+.thumb {
+  padding: 0px !important;
+  margin-top: 6px !important;
+  border: 0px !important;
+  border: 1px solid #585858 !important
+}
+
+.thumb:hover {
+  border: 1px solid white !important
+}
+
+.thumbs-wrapper {
+  margin: 0px !important;
+  background-color: #585858;
+  width: 670px;
+  margin-left: 30px !important;
+}
+
+.thumbs-wrapper .control-arrow {
+  padding-top: 5px !important;
+}
+
+.control-arrow {
+  color: rgba(0,0,0,0.9)  !important;
+}
+
+.control-next::before {
+margin: 0px;
+margin-bottom: 3px !important;
+margin-right: 3px !important;
+}
+
+.control-prev::before {
+  margin: 0px;
+  margin-bottom: 3px !important;
+  margin-left: 3px !important;
+}
+
+.dot {
+  display: none !important;
+}
+
+#description {
+  margin-top: 32px;
+  font-size: 1em;
+  width: 730px  !important;
+  margin-bottom: 16px;
+}
+
+.descPara {
+  margin: 0px;
+  margin-bottom: 24px;
+}
+
+.agentContainer {
+  display: flex;
+}
+
+.agent {
+  display: inline-block;
+  width: 45px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+#realtorInfo {
+  display: inline-block;
+  flex-direction: row-reverse;
+  font-size: .9em;
+  text-rendering: optimizeLegibility;
+  width: 730px  !important;
+  margin-top: 5px;
+}
+
+#realtorInfo p {
+  margin: 0px;
+}
+
+.statsTitle {
+  margin-top: 32px;
+  margin-bottom: 0px;
+  font-weight: 900;
+}
+
+.piContainer {
+  display: flex;
+  width: 730px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+
+.statEntry {
+  display: flex;
+  flex-shrink: 0;
+  width: 45%;
+  flex-shrink: 0;
+
+}
+
+.statName {
+  display: inline-block;
+  flex: 1;
+  text-align: left;
+  flex-shrink: 0;
+  padding-top: 16px;
+  width: 50%;
+  color: #797979;
+}
+
+.statVal {
+  display: inline-block;
+  text-transform: capitalize;
+  flex: 1;
+  text-align: right;
+  flex-shrink: 0;
+  padding-top: 16px;
+  width: 50%;
+}
+
+.expander {
+  height: 4em;
+  overflow: hidden;
+}
+
+.showHideContainer {
+  display: inline-block;
+}
+
+.showMoreLess {
+  display: inline-block;
+  font-size: .9em;
+  color: #1080a2;
+  margin-bottom: 0px;
+}
+
+.expandedArrow {
+  color: #1080a2;
+  fill: #1080a2;
+  transform: rotate(180deg);
+}
+
+.collapsedArrow {
+
+  color: #1080a2;
+  fill: #1080a2;
+}
+
+.linkIcon {
+  color: #1080a2;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 6px;
+}
+
+.contReadingLink {
+  display: inline-block;
+}
+
+.community {
+  text-transform: uppercase;
+}
+
+#mainContent {
+  display: inline-block;
+}
+
+#sideBar {
+  white-space : wrap;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 20px;
+}
+
+#sBContainer {
+  display: inline-block;
+  text-align: center;
+  width: 313px;
+
+}
+
+.goTour {
+  width: 100%;
+  height: 32px;
+  text-align: center;
+  margin-bottom: 8px;
+  font-size: 1.35em;
+}
+
+#dateContainer {
+  padding-left: 20px;
+  justify-content: center;
+  display: flex;
+  align-content: center;
+
+}
+
+.dateBoxes {
+  border: 1px solid rgb(209, 209, 209);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 3px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.dateBoxes:hover {
+  border: 1px solid grey;
+}
+
+.dateBoxes:focus {
+  border: 1px solid rgb(63, 63, 63);
+  box-shadow: 0 3px 4px 0 #ccc;
+  background-color: #fff;
+}
+
+.dateInfo {
+  font-size: .65em;
+  text-transform: uppercase;
+  flex-direction: column;
+  display: flex;
+  border: 0px;
+  background-color: #fff
+}
+
+.dateNumber {
+  flex-direction: column;
+  display: flex;
+  font-size: 1.75em;
+  border: 0px;
+  background-color: #fff
+}
+
+.tourArrow {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+  height: 30px !important;
+  width: 30px !important;
+  background-color: #fff !important;
+  border: 1px solid #ccc !important;
+  border-radius: 100% !important;
+  top: 25px;
+  left: -20px;
+  transform: rotate(-90deg);
+}
+
+.tourArrow:hover {
+  cursor: pointer;
+}
+
+.nextDateIcon {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+#tourVia {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.tour {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 48px;
+  background-color: #fff !important;
+  border: 1px solid rgb(209, 209, 209);
+  font-size: .80em;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour:hover {
+  border: 1px solid grey;
+}
+
+#scheduleTour {
+  display: inline-block;
+  margin-top: 12px;
+  height: 40px;
+  width: 100%;
+  background-color: #c82021;
+  line-height: 40px;
+  color: #fff;
+  font-weight: bold;
+}
+
+#scheduleTour:hover {
+  background-color: #f14646;
+}
+
+.noOb {
+  display: inline-block;
+  text-align: center;
+  margin-top: 20px;
+  color: #969696;
+  font-size: .75em;
+  margin-top: 10px;
+}
+
+.or {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  color: rgb(165, 165, 165);
+  font-size: 1em;
+  font-weight: bold;
+}
+
+#startOffer {
+  display: inline-block;
+  margin-top: 30px;
+  height: 40px;
+  width: 100%;
+  background-color:#f5f5f5;
+  border: 1px solid rgb(190, 190, 190);
+  line-height: 40px;
+  color: #585858;
+  font-weight: bold;
+}
+
+#startOffer:hover {
+  background-color: rgb(231, 231, 231);
+}
+
+.buyWithRedfin {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.infoIcon {
+  cursor: pointer;
+  fill: #ccc;
+  display: inline-block;
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  top: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.infoIcon:hover {
+  fill: rgb(95, 95, 95);
+}
+
+.askQuestion {
+  display: flex;
+  padding-top: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.seperator {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  border-top: 1px solid rgb(214, 214, 214);
+  border-bottom: 1px solid rgb(214, 214, 214);
+}
+
+.askQ {
+  cursor: pointer;
+  border-right: 1px solid rgb(214, 214, 214);
+  display: flex;
+  width: 100%;
+  height: 20px;
+  background-color: #fff !important;
+  font-size: .95em;
+  align-items: center;
+  justify-content: center;
+  color: #1080a2;
+}
+
+.askQ:hover{
+  color: #43b6da;
+}
+
+.phoneQ {
+  display: flex;
+  width: 100%;
+  height: 20px;
+  background-color: #fff !important;
+  font-size: .95em;
+  align-items: center;
+  justify-content: center;
+  color: #1080a2;
+}
+
+.phoneQ:hover{
+  color: #43b6da;
+}

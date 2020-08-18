@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import $ from 'jquery';
+import '../styles/styles.css';
+import '../styles/carousel.css';
 
 export default class Description extends Component {
   static showMoreLess() {
