@@ -33,7 +33,7 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "seed": "node dbseed.js",
+    "seed": "node ./dbase/dbseed.js",
     "start": "nodemon index.js",
     "react-dev": "webpack -d --watch",
     "lint": "eslint ./",
