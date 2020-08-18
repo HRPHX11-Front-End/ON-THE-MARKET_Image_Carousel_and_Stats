@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import uuid from 'react-uuid';
 import { Carousel } from 'react-responsive-carousel';
+import '../styles/styles.css';
+import '../styles/carousel.css';
 
 export default class ImageCarousel extends Component {
   constructor(props) {
