@@ -149,4 +149,4 @@ const refreshDb = () => {
 };
 
 // *Uncomment the next line to refresh the databse with new records
-// *nrefreshDb();
+refreshDb();
