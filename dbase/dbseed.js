@@ -3,6 +3,11 @@ const mongoose = require('mongoose');
 const Description = require('./models/description');
 const Stats = require('./models/stats');
 
+mongoose.connect('mongodb://localhost/redfin_cds', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 // *function to seed random descriptions into db
 /* eslint-disable */
 function descSeed() {
@@ -115,6 +120,7 @@ const dbseed = () => {
       lastUpdated,
       source,
     });
+    console.log(randoDescription);
     randoDescription.save();
 
     // *Create random Stats document
@@ -132,6 +138,7 @@ const dbseed = () => {
       lotSize,
       mlsNum,
     });
+    console.log(randomStats);
     randomStats.save();
   }
 };
