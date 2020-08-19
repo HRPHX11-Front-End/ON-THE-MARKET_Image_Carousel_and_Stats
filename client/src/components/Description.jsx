@@ -33,7 +33,7 @@ export default class Description extends Component {
   }
 
   componentDidMount() {
-    axios.get('/description')
+    axios.get('http://127.0.0.1:3005/description')
       .then((data) => {
         const desc = data.data.document;
         console.log(desc);
