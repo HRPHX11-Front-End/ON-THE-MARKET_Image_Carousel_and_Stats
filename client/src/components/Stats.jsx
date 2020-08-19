@@ -22,7 +22,7 @@ export default class Stats extends Component {
   }
 
   componentDidMount() {
-    axios.get('/stats')
+    axios.get('http://127.0.0.1:3005/stats')
       .then((data) => {
         const stats = data.data.stats;
         console.log(stats);

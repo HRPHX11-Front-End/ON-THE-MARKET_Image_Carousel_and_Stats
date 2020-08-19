@@ -15,7 +15,7 @@ export default class ImageCarousel extends Component {
 
   componentDidMount() {
     const randomProperty = Math.ceil(Math.random() * Math.floor(9));
-    axios.get(`/images/propertyImages/:0${randomProperty}`)
+    axios.get(`http://127.0.0.1:3005/images/propertyImages/:0${randomProperty}`)
       .then((data) => {
         const propertyImages = data.data.response;
         const fileNames = propertyImages.map((index) => index.Key);
