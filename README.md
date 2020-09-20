@@ -1,9 +1,6 @@
-# ImageCarouselAndDescription
-Image Carousel and Description
+## ON THE MARKET
 
-
-Scripts:
-
-npm start
-npm react-dev
-npm run seed
+### Features
+- Image Carousel
+- Property Description
+- Property Stats
